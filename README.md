@@ -1,45 +1,82 @@
-# DriveGO – Car Rental API
 
-A simple Node.js + Express REST API project for a car rental system.
 
-## Requirements
+# DriveGO - Car Rental API
 
-- Node.js (version 18 or later recommended)
-- npm
+## Project Description
+DriveGO is a car rental management system developed
+using Node.js and Express.js.
 
-## Run locally
+The system provides REST API endpoints for managing
+cars and rental bookings.
 
-1. Open a terminal in the project folder (the folder containing `package.json`).
-2. Install dependencies:
+## Technologies
+- Node.js
+- Express.js
+- JavaScript
+- REST API
+- JSON
+- Git & GitHub
 
-   ```bash
+## Project Structure
+
+DriveGO/
+├── app.js
+├── package.json
+├── routes/
+│   ├── cars.js
+│   └── bookings.js
+└── controllers/
+    ├── carsController.js
+    └── bookingsController.js
+
+## API Endpoints
+
+### Cars
+GET /api/cars
+GET /api/cars/available
+GET /api/cars/search?q=Toyota
+GET /api/cars/:id
+POST /api/cars
+PUT /api/cars/:id
+DELETE /api/cars/:id
+
+### Bookings
+GET /api/bookings
+GET /api/bookings/summary
+GET /api/bookings/search?q=Daniel
+GET /api/bookings/:id
+POST /api/bookings
+PUT /api/bookings/:id
+DELETE /api/bookings/:id
+
+## How to Run
+
+1. Clone the repository.
+2. Open the project folder.
+3. Install dependencies:
+
    npm install
-   ```
 
-3. Start the server:
+4. Start the server:
 
-   ```bash
-   npm start
-   ```
+   node app.js
 
-4. Open the API in your browser: <http://localhost:3000>
+5. Open in your browser:
 
-## API routes
+   http://localhost:3000
 
-| Method | Route | Description |
-|---|---|---|
-| GET | `/` | API welcome message |
-| GET | `/api/cars` | List all cars |
-| GET | `/api/cars/available` | List available cars |
-| GET | `/api/bookings` | List bookings |
-| GET | `/api/bookings/summary` | Show booking counts by status |
+## Exercise 2 - Controllers
+The project uses separate Controllers and Routes.
 
-### Example URLs
+Routes define API endpoints.
+Controllers handle HTTP requests and return JSON responses.
 
-- <http://localhost:3000/api/cars>
-- <http://localhost:3000/api/cars/available>
-- <http://localhost:3000/api/bookings>
-- <http://localhost:3000/api/bookings/summary>
+The API supports:
+- Retrieving data
+- Searching
+- Creating records
+- Updating records
+- Deleting records
 
 ## Notes
 
